@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - InkCo.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom Cursor Styles */
+        .custom-cursor {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+            will-change: transform;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #33ccff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+            box-shadow: 0 0 10px rgba(51, 204, 255, 0.5);
+        }
+
+        .cursor-ring {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #33ccff;
+            border-radius: 50% 0 50% 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.2s;
+            box-shadow: 0 0 15px rgba(51, 204, 255, 0.3);
+        }
+
+        .cursor-hover .cursor-dot {
+            width: 12px;
+            height: 12px;
+            background: #ff3366;
+            box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+        }
+
+        .cursor-hover .cursor-ring {
+            width: 40px;
+            height: 40px;
+            border-color: #ff3366;
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.3);
+            animation: cursorPulse 1.5s infinite;
+        }
+
+        @keyframes cursorPulse {
+            0% {
+                transform: translate(-50%, -50%) rotate(45deg) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-50%, -50%) rotate(225deg) scale(1.2);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(405deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Hide cursor on interactive elements */
+        a, button, .card, .excellence-card {
+            cursor: none !important;
+        }
+
+        /* Hide default cursor */
+        html, body {
+            cursor: none !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>InkCo.</h1>
+        </div>
+        
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="products.html">Products <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="continuous-inkjet-printer.html">Continuous Inkjet Printer</a></li>
+                        <li><a href="products.html#thermal-tij">Thermal Inkjet Printers Tij</a></li>
+                        <li><a href="products.html#inkjet">Inkjet Printer</a></li>
+                        <li><a href="products.html#batch">Batch Coding Machine</a></li>
+                        <li><a href="products.html#laser">Laser Marking Machine</a></li>
+                        <li><a href="products.html#thermal">Thermal Inkjet Printers</a></li>
+                        <li><a href="products.html#handheld">Handheld Inkjet Printer</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-search">
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get in Touch</h1>
+            <p>We're here to help with all your printing needs</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <h3>Contact Person</h3>
+                        <p>Mukund Naik</p>
+                        <p class="designation">CEO</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <h3>Company</h3>
+                        <p>Gauri Inkk-Tec Private Limited</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Flat No.B1, Divya Kunj Apts,<br>Gokhale Rd, Model Colony,<br>Pune - 411016, Maharashtra, India</p>
+                        <a href="https://maps.google.com/?q=Flat+No.B1,+Divya+Kunj+Apts,+Gokhale+Rd,+Model+Colony,+Pune+-+411016" class="direction-link" target="_blank">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:08046064955" class="contact-link">080-4606-4955</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Working Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder=" " required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="sales">Sales</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder=" " required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1975752666917!2d73.83799731478893!3d18.52419998740883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c0653f13b4b5%3A0x4ab89ff907b5b86e!2sModel%20Colony%2C%20Shivajinagar%2C%20Pune%2C%20Maharashtra%20411016!5e0!3m2!1sen!2sin!4v1644842223434!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ink Solutions</h4>
+                <ul>
+                    <li><a href="#">Industrial Inks</a></li>
+                    <li><a href="#">Specialty Coatings</a></li>
+                    <li><a href="#">Custom Formulations</a></li>
+                    <li><a href="#">Color Matching</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Technical Support</h4>
+                <ul>
+                    <li><a href="#">Safety Data Sheets</a></li>
+                    <li><a href="#">Technical Documents</a></li>
+                    <li><a href="#">Quality Certificates</a></li>
+                    <li><a href="#">Application Guides</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="#">Packaging</a></li>
+                    <li><a href="#">Textile Printing</a></li>
+                    <li><a href="#">Digital Printing</a></li>
+                    <li><a href="#">Automotive</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@inkindustrial.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Industrial Park, Suite 100<br>Manufacturing District, ST 12345</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Industrial Ink Solutions. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">ISO Certifications</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="script.js"></script>
+    <script src="js/cursor.js"></script>
+</body>
+</html>

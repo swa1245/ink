@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Gauri Inkk-Tec</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom Cursor Styles */
+        .custom-cursor {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+            will-change: transform;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #33ccff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+            box-shadow: 0 0 10px rgba(51, 204, 255, 0.5);
+        }
+
+        .cursor-ring {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #33ccff;
+            border-radius: 50% 0 50% 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.2s;
+            box-shadow: 0 0 15px rgba(51, 204, 255, 0.3);
+        }
+
+        .cursor-hover .cursor-dot {
+            width: 12px;
+            height: 12px;
+            background: #ff3366;
+            box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+        }
+
+        .cursor-hover .cursor-ring {
+            width: 40px;
+            height: 40px;
+            border-color: #ff3366;
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.3);
+            animation: cursorPulse 1.5s infinite;
+        }
+
+        @keyframes cursorPulse {
+            0% {
+                transform: translate(-50%, -50%) rotate(45deg) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-50%, -50%) rotate(225deg) scale(1.2);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(405deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Hide cursor on interactive elements */
+        a, button, .card, .excellence-card {
+            cursor: none !important;
+        }
+
+        /* Hide default cursor */
+        html, body {
+            cursor: none !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>InkCo.</h1>
+        </div>
+        
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="products.html" class="active">Products <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="continuous-inkjet-printer.html">Continuous Inkjet Printer</a></li>
+                        <li><a href="thermal-inkjet-printer.html">Thermal Inkjet Printers Tij</a></li>
+                        <li><a href="inkjet-printer.html">Inkjet Printer</a></li>
+                        <li><a href="batch-coding-machine.html">Batch Coding Machine</a></li>
+                        <li><a href="laser-marking-machine.html">Laser Marking Machine</a></li>
+                        <li><a href="thermal-inkjet-printers-tij.html">Thermal Inkjet Printers</a></li>
+                        <li><a href="handheld-inkjet-printer.html">Handheld Inkjet Printer</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-search">
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="products-banner">
+        <div class="banner-background"></div>
+        <div class="banner-content">
+            <!-- <h1>Premium Printing Solutions</h1>
+            <p>Discover our innovative range of industrial printers and accessories</p>
+            <a href="#products" class="banner-cta">Explore Products</a> -->
+        </div>
+    </section>
+
+    <!-- <div class="product-categories">
+        <button class="category-btn active" data-category="all">All Products</button>
+        <button class="category-btn" data-category="inkjet">Inkjet Printers</button>
+        <button class="category-btn" data-category="thermal">Thermal Printers</button>
+        <button class="category-btn" data-category="accessories">Accessories</button>
+    </div> -->
+
+    <section class="products-grid">
+        <!-- Inkjet Printers -->
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/Continuous Inkjet Printer.webp" alt="Continuous Inkjet Printer">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Continuous Inkjet Printer</h3>
+                <p>High-speed continuous printing solution for industrial applications</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/Handheld Inkjet Printer.webp" alt="Handheld Inkjet Printer">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Handheld Inkjet Printer</h3>
+                <p>Portable printing solution for flexible marking needs</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/Industrial Inkjet Printer.webp" alt="Industrial Inkjet Printer">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Industrial Inkjet Printer</h3>
+                <p>Heavy-duty printing system for industrial environments</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/Industrial Inkjet Printing System.webp" alt="Industrial Inkjet Printing System">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Industrial Inkjet Printing </h3>
+                <p>Complete printing solution for production lines</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Thermal Printers -->
+        <div class="product-item" data-category="thermal">
+            <div class="product-image">
+                <img src="assets/images/products/Thermal Inkjet Printers Tij.webp" alt="Thermal Inkjet Printers">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Thermal Inkjet Printers</h3>
+                <p>High-resolution coding for premium packaging</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="thermal">
+            <div class="product-image">
+                <img src="assets/images/products/Thermal Transfer Printer.webp" alt="Thermal Transfer Printer">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Thermal Transfer Printer</h3>
+                <p>Premium quality label and packaging printing</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="thermal">
+            <div class="product-image">
+                <img src="assets/images/products/Mobile Thermal Inkjet Printer.webp" alt="Mobile Thermal Inkjet Printer">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Mobile Thermal Inkjet Printer</h3>
+                <p>Portable thermal printing solution </p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Laser Systems -->
+        <div class="product-item" data-category="laser">
+            <div class="product-image">
+                <img src="assets/images/products/Laser Marking Machine.webp" alt="Laser Marking Machine">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Laser Marking Machine</h3>
+                <p>Precise and permanent marking solution for on-the-go needs</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="laser">
+            <div class="product-image">
+                <img src="assets/images/products/Laser Printer.webp" alt="Laser Printer">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Laser Printer</h3>
+                <p>High-quality laser printing for professional results</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Batch Coding -->
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/Batch Coding Machine.webp" alt="Batch Coding Machine">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Batch Coding Machine</h3>
+                <p>Efficient batch coding for production lines</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/HX Nitro Batch Coding Machine.webp" alt="HX Nitro Batch Coding Machine">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>HX Nitro Batch Coding Machine</h3>
+                <p>Advanced batch coding with speed</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Accessories -->
+        <div class="product-item" data-category="accessories">
+            <div class="product-image">
+                <img src="assets/images/products/Poly TIJ Printer Cartridge.webp" alt="Printer Cartridge">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Printer Cartridge</h3>
+                <p>High-quality ink cartridges for optimal performance</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="accessories">
+            <div class="product-image">
+                <img src="assets/images/products/Packing Conveyor Belt.webp" alt="Packing Conveyor Belt">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Packing Conveyor Belt</h3>
+                <p>Automated conveyor systems for efficient production</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/Maplejet Hx.webp" alt="Maplejet Hx">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Maplejet Hx</h3>
+                <p>Next-generation high-resolution coding system</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="product-item" data-category="inkjet">
+            <div class="product-image">
+                <img src="assets/images/products/Handcoder.webp" alt="Handcoder">
+                <div class="product-overlay">
+                    <button class="quick-view"><i class="fas fa-eye"></i></button>
+                    <button class="add-to-quote"><i class="fas fa-file-invoice-dollar"></i></button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h3>Handcoder</h3>
+                <p>Manual coding solution for small-scale operations</p>
+                <a href="#" class="details-btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="Product Image">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ink Solutions</h4>
+                <ul>
+                    <li><a href="#">Industrial Inks</a></li>
+                    <li><a href="#">Specialty Coatings</a></li>
+                    <li><a href="#">Custom Formulations</a></li>
+                    <li><a href="#">Color Matching</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Technical Support</h4>
+                <ul>
+                    <li><a href="#">Safety Data Sheets</a></li>
+                    <li><a href="#">Technical Documents</a></li>
+                    <li><a href="#">Quality Certificates</a></li>
+                    <li><a href="#">Application Guides</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="#">Packaging</a></li>
+                    <li><a href="#">Textile Printing</a></li>
+                    <li><a href="#">Digital Printing</a></li>
+                    <li><a href="#">Automotive</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@inkindustrial.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Industrial Park, Suite 100<br>Manufacturing District, ST 12345</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Industrial Ink Solutions. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">ISO Certifications</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="script.js"></script>
+    <script src="js/cursor.js"></script>
+    <script>
+        // Get the modal and its elements
+        const modal = document.getElementById('productModal');
+        const modalImage = modal.querySelector('img');
+        const closeBtn = modal.querySelector('.close-modal');
+
+        // Get all quick view buttons
+        const quickViewButtons = document.querySelectorAll('.quick-view');
+
+        // Add click event to all quick view buttons
+        quickViewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productImage = this.closest('.product-image').querySelector('img');
+                modalImage.src = productImage.src;
+                
+                // Show modal
+                modal.style.display = 'block';
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
