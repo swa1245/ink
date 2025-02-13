@@ -286,7 +286,7 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: #Ff4500;
     transition: width 0.3s ease;
 }
 
@@ -295,7 +295,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--hover-color);
+    color: #Ff4500;
 }
 
 .nav-links a.active::after {
