@@ -2307,7 +2307,7 @@ body {
 .ceo-quote cite {
     display: block;
     margin-top: 1rem;
-    color: var(--primary-color);
+    color:#444;
 }
 
 .overview-image img {
